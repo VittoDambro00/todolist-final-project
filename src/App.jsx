@@ -1,13 +1,16 @@
-import { useState } from 'react'
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import PomodoroTimer from './pages/PomodoroTimer';
 
 export default function App() {
 return (
     <div>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/pomodoroTimer" element={<PomodoroTimer />} />
         </Routes>
       </Router>
     </div>
