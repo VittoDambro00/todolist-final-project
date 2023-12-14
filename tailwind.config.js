@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    color: {
+      nav_foot: "#E25858",
+      body: "#1A1A1A",
+    },
   },
   plugins: [],
 }
