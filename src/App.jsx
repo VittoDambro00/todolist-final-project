@@ -5,6 +5,8 @@ import Error404 from "./pages/Error404.jsx"
 import Footer from "./components/Footer.jsx"
 import Index from "./pages/Index.jsx"
 
+import PomodoroTimer from './pages/PomodoroTimer';
+
 export default function App() {
 return (
      <div>
