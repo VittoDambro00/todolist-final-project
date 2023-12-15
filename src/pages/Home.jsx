@@ -54,41 +54,41 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className="bg-[#191919] min-h-[calc(100vh-80px)] flex justify-center items-center flex-col">
+    <div className="bg-red-600/80 dark:bg-[#1A1A1A] min-h-screen flex justify-center items-center flex-col">
       {/* <h1 className="text-4xl text-white mt-[100px]">{quotes}</h1> */}
-      <div className="h-[25vh] flex justify-center items-center gap-[8px]">
+      <div className="h-[25vh] flex justify-center items-center gap-4 w-[80wh]">
         <input
           id="text-input"
-          className="w-[639px] h-[54px] rounded-[8px] p-[16px] gap-[8px] bg-[#262626] hover:border-0 text-white"
+          className=" min-w-[60vw] h-[5vh] rounded-[8px] p-[16px] dark:bg-[#262626] bg-white hover:border-0 dark:text-white text-black"
           type="text"
           onChange={controllaCambio}
         />
         <button
-          className="text-white w-[89px] h-[52px] border-0 rounded-[8px] p-[16px] gap-[8px] bg-[#E25858]"
+          className="flex dark:text-white text-[#E25858] w-max-[20vw] h-[5vh] rounded-[8px] p-4 dark:bg-[#E25858] bg-white items-center justify-center" 
           onClick={aggiungiTask}
         >
           Invio
         </button>
       </div>
 
-      <div className="w-[736px] flex justify-center items-center flex-col mb-[100px]">
-        <div className="flex justify-between text-white w-[736px] mt-[100px] mb-[100px]">
-          <div className="h-0 text-[#E25858]">
+      <div className="w-[50vw] flex justify-center items-center flex-col mb-[100px]">
+        <div className="flex justify-between text-white w-[90vw] mt-[100px] mb-[100px]">
+          <div className="h-0 dark:text-[#E25858]">
             Task created{" "}
-            <span className="bg-slate-600 p-[3px] rounded-full text-white">
+            <span className="dark:bg-slate-600 bg-white p-[3px] rounded-full dark:text-white text-[#E25858]">
               {singolTask}
             </span>
           </div>
-          <div className="h-0 text-[#E25858]">
-            <span className="bg-slate-600 p-[3px] rounded-full text-white">
-              {taskCompleted}
+          <div className="h-0 dark:text-[#E25858]">
+            <span className="dark:bg-slate-600 bg-white p-[3px] rounded-full dark:text-white text-[#E25858]">
+              0
             </span>{" "}
             Tasks completed
           </div>
         </div>
         {singolTask === 0 && (
-          <div className="h-[25vh] flex justify-center items-center flex-col gap-3 text-[#808080] text-center">
-            <img src={notepad} alt="clip-icon" className="h-[56px] w-[56px]" />
+          <div className="h-[25vh] flex justify-center items-center flex-col gap-3 dark:text-[#808080] text-white text-center">
+            <img src={img} alt="clip-icon" className="h-[56px] w-[56px]" />
             <p>
               Non hai ancora attività registrate <br /> Crea attività e
               organizza le tue cose da fare
@@ -100,7 +100,7 @@ export default function Home() {
           return (
             <div
               data-aos="fade-right"
-              className="text-white gap-[12px] flex items-center justify-between text-center bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
+              className="text-center dark:bg-slate-600 bg-white rounded-lg p-[5px] m-1 w-[300px]"
               key={index}
             >
               <div>

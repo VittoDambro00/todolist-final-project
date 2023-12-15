@@ -10,5 +10,6 @@ export default {
       'bg-nino':"url('./assets/img/nino_for_president_copia.jpg')",
     }
   },
+  darkMode:"class",
   plugins: [],
 }

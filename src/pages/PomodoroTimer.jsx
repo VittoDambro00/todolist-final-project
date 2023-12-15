@@ -41,18 +41,16 @@ const Timer = () => {
   }, [isActive, time]);
 
   return (
-    <div className="bg-red-500/80">
-      <div className="flex flex-col items-center justify-center min-h-screen mb-10">
-        {/* Img Pomodoro */}
-        <div className="flex flex-col items-center">
-          <div className="relative group transition-transform transform-gpu">
-            <img
-              src="/src/assets/pomodoroTimer.png"
-              alt="Pomodoro Timer"
-              className="mb-8 scale-100 group-hover:scale-105 transition-transform duration-300 ease-in-out"
-            />
-          </div>
-        </div>
+    <div className='bg-red-600/80 dark:bg-[#1A1A1A]'>
+
+    <div className="flex flex-col items-center justify-center min-h-screen">
+
+      <div className="flex flex-col items-center mt-8">
+      <div className="relative group transition-transform transform-gpu">
+        <img src="../src/assets/pomodoroTimer.png" alt="Pomodoro Timer"
+          className="mb-8 scale-100 group-hover:scale-105 transition-transform duration-300 ease-in-out" />
+      </div>
+      </div>
 
         <div className="bg-red-500 p-8 rounded-lg text-white text-center shadow-md">
           <div className="gap-4 flex justify-between mb-7">
@@ -191,7 +189,6 @@ const Timer = () => {
         </div>
       </div>
     </div>
+    </div>
   );
 };
-
-export default Timer;

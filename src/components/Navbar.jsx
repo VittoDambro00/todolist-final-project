@@ -1,5 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Theme from "./Theme";
+import { stack as Menu } from 'react-burger-menu';
+import "./BurgerMenu.css"
+ 
 
 export default function Navbar() {
   const [nomeUtenteInserito, setNomeUtenteInserito] = useState("");
