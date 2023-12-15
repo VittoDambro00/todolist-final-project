@@ -11,8 +11,8 @@ return (
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes> 
-        <Footer>  </Footer>
+        <Footer></Footer>
       </Router>
     </div>
   );
-}1
+}
