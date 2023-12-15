@@ -66,7 +66,7 @@ export default function WelcomePage() {
                             <Link 
                                 to="/home"
                                 className="text-white absolute end-[40px] bottom-2.5 bg-[#1A1A1A] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Inizia!
+                                Inizia!!
                             </Link>
                              
                         </div>
