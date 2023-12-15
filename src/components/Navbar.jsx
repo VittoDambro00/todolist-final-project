@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
  
 
 export default function Navbar() {
-    const [nomeUtenteInserito, setnomeUtenteInserito] = useState("");
+    const [nomeUtenteInserito, setNomeUtenteInserito] = useState("");
     console.log(nomeUtenteInserito);
 
     useEffect(() => {
       const nomeUtenteInserito = JSON.parse(localStorage.getItem('nomeUtente'));
       if (nomeUtenteInserito) {
-       setnomeUtenteInserito(nomeUtenteInserito);
+       setNomeUtenteInserito(nomeUtenteInserito);
        console.log(nomeUtenteInserito);
       }
     }, []);

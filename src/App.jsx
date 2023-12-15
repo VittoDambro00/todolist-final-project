@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import WelcomeScreen from "./pages/WelcomeScreen.jsx"
 import Error404 from "./pages/Error404.jsx"
 import Footer from "./components/Footer.jsx"
+import Index from "./pages/Index.jsx"
 
 export default function App() {
 return (
