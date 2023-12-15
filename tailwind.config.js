@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    backgroundImage: {
+      'bg-nino':"url('./assets/img/nino_for_president_copia.jpg')",
+    }
   },
   plugins: [],
 }

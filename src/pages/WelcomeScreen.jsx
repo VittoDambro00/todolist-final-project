@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import "./welcomeScreen.css"
-import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 // Imposto palette colori, dei 2 temi.
@@ -58,18 +58,13 @@ export default function WelcomePage() {
                                 className="block w-[246px] p-4 text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-gray-500 focus:border-gray-500" 
                                 placeholder="Inserisci il tuo nome" 
                                 required 
-                            />
-<button onClick={()=>{
-    setNomeUtente(nomeUtente)
-    useNavigate().navigateTo("/index")
-}}>Inizia!</button>
-{/*                             
+                            />  
                             <Link 
-                                to="/index"
+                                to="/home"
                                 className="text-white absolute end-[40px] bottom-2.5 bg-[#1A1A1A] hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Inizia!
                             </Link>
-                             */}
+                            
                         </div>
                             {console.log(nomeUtente)}
                     </div>
