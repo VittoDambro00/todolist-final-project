@@ -51,15 +51,15 @@ export default function Home() {
   return (
     <div className="bg-red-600/80 dark:bg-[#1A1A1A] min-h-screen flex justify-center items-center flex-col">
       {/* <h1 className="text-4xl text-white mt-[100px]">{quotes}</h1> */}
-      <div className="h-[25vh] flex justify-center items-center gap-[8px] w-[80wh]">
+      <div className="h-[25vh] flex justify-center items-center gap-4 w-[80wh]">
         <input
           id="text-input"
-          className=" w-[60vw] h-[54px] rounded-[8px] p-[16px] gap-[8px] dark:bg-[#262626] bg-white hover:border-0 dark:text-white text-black"
+          className=" min-w-[60vw] h-[5vh] rounded-[8px] p-[16px] dark:bg-[#262626] bg-white hover:border-0 dark:text-white text-black"
           type="text"
           onChange={controllaCambio}
         />
         <button
-          className="dark:text-white text-[#E25858] w-[10vw] h-[52px] rounded-[8px] p-4 gap-[8px] dark:bg-[#E25858] bg-white text-"
+          className="flex dark:text-white text-[#E25858] w-max-[20vw] h-[5vh] rounded-[8px] p-4 dark:bg-[#E25858] bg-white items-center justify-center" 
           onClick={aggiungiTask}
         >
           Invio
