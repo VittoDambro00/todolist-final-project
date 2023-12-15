@@ -108,7 +108,6 @@ export default function Home() {
             </div>
           );
         })}
-        <div className="">wfewfwe</div>
       </div>
     </div>);
 }

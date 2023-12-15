@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
  
 
 export default function Navbar() {
     const [nomeUtenteInserito, setNomeUtenteInserito] = useState("");
     console.log(nomeUtenteInserito);
+    const location = useLocation()
+
+    if(location.pathname === "/") {
+      return null
+    }
 
     useEffect(() => {
       const nomeUtenteInserito = JSON.parse(localStorage.getItem('nomeUtente'));
@@ -25,7 +30,7 @@ export default function Navbar() {
         <h1>To-Do List</h1>
       </div>
       <div className="flex flex-row gap-4 text-white">
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/pomodoroTimer">Pomodoro timer</Link>
         <h1 className="flex justify-center items-center">{nomeUtenteInserito}</h1>
       </div>
