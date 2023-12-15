@@ -1,20 +1,7 @@
 import { useState, useEffect } from "react"
 import "./welcomeScreen.css"
-/* import Nav from ".components/Nav" */
 import { Link } from "react-router-dom"
 
-// Imposto palette colori, dei 2 temi.
-/* const coloreTitolo = "text-sky-50";
-const coloreTesto = "text-sky-100";
-const coloreSfondo = "bg-sky-950";
-const paletteColoriDark = {titolo: coloreTitolo, testo: coloreTesto, sfondo: coloreSfondo};
-const coloreTitoloLight = "text-sky-950";
-const coloreTestoLight = "text-sky-700";
-const coloreSfondoLight = "bg-sky-50";
-const paletteColoriLight = {titolo: coloreTitoloLight, testo:coloreTestoLight, sfondo:coloreSfondoLight};
-let darkThemeOn = true; */
-
-// Funzione che cambia tema
 export default function WelcomePage() {
 /*     
     const [paletteColori, setPaletteColori] = useState(paletteColoriDark);
@@ -37,10 +24,10 @@ export default function WelcomePage() {
 
 
     return  <div className="bg-[#E25858] h-[100vh] w-full flex justify-center items-center text-center">
-                <div className="bg-[#E25858] rounded-3xl mb-6 px-4 py-1 h-[900px] w-[420px] flex flex-col justify-center">
+                <div className="bg-[#E25858] rounded-3xl mb-6 px-4 py-1 h-[1400px] w-[420px] flex flex-col justify-center">
                     <div className="rounded-[25px] py-10 px-10 border border-ahite shadow_personalizzata">
                         <p className={`text-white subpixel-antialiased tracking-wide text-4xl mb-10`}>Welcome to Todius</p>
-                        <p className={`text-white text-lg`}>Ciascun istante è un dono prezioso. Scegli come investire il tuo tempo con saggezza, poiché la somma di piccole azioni determina la grandezza di una vita straordinaria. Frase motivazionale a c* by chatGPT.</p>
+                        <p className={`text-white text-lg`}>aaaaaaaaaaaaaaaaaaaaaaCiascun istante è un dono prezioso. Scegli come investire il tuo tempo con saggezza, poiché la somma di piccole azioni determina la grandezza di una vita straordinaria. Frase motivazionale a c* by chatGPT.</p>
                         <p className={`text-white text-lg mb-3 mt-8`}>Presentati!</p>
 
                         <label htmlFor="search" className="text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
