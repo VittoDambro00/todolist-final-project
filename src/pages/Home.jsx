@@ -85,7 +85,7 @@ export default function Home() {
         </div>
         {singolTask === 0 && (
           <div className="h-[25vh] flex justify-center items-center flex-col gap-3 dark:text-[#808080] text-white text-center">
-            <img src={img} alt="clip-icon" className="h-[56px] w-[56px]" />
+            <img src={notepad} alt="clip-icon" className="h-[56px] w-[56px]" />
             <p>
               Non hai ancora attività registrate <br /> Crea attività e
               organizza le tue cose da fare

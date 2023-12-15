@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // import Spotify from './Spotify';
 import Iframe from "react-iframe";
 
-const Timer = () => {
+export default function Timer() {
   const [time, setTime] = useState(1500); // Tempo in secondi (25 minuti)
   const [isActive, setIsActive] = useState(false);
 
@@ -149,7 +149,7 @@ const Timer = () => {
       </div>
 
       {/* Contenitore 2 */}
-      <div className="bg-red-500/80 p-8">
+      <div className="bg-red-500/80 p-8 mt-20">
         <div className="flex flex-col items-center text-white text-center justify-center min-h-screen">
           {/* Spiegazione dell'utilizzo */}
           <h4 className="font-medium text-4xl p-8">
@@ -188,7 +188,6 @@ const Timer = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
