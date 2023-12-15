@@ -5,7 +5,6 @@ export default function Theme() {
   const [isDark, setTema] = useState(false);
 
   useEffect(() => {
-    console.log(isDark);
     isDark
       ? document.body.classList.add("dark")
       : document.body.classList.remove("dark");

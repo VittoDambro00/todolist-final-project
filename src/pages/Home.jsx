@@ -25,8 +25,6 @@ export default function Home() {
       const newArray = [...lista, task];
       setLista(newArray);
       setTask("");
-    } else if (nuovaTask === "nino") {
-      console.log("ciaooo");
     }
   }
 
@@ -46,7 +44,6 @@ export default function Home() {
 
   function checkTask() {
     const check = document.querySelectorAll("input:checked");
-    console.log(check);
     setTaskCompleted(check.length);
   }
 

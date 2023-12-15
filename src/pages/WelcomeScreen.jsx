@@ -15,7 +15,6 @@ export default function WelcomeScreen() {
     const gestisciPressioneInvio = (bottonePremuto) => {
         if (bottonePremuto.key === "Enter") {
         // Redirect alla pagina iniziale Home
-        console.log("allorarnasujn")
         navigate("/home");
         }
     };
@@ -49,7 +48,6 @@ export default function WelcomeScreen() {
                                 Inizia!
                             </Link>
                         </div>
-                            {console.log(nomeUtente)}
                     </div>
                 </div>
             </div>

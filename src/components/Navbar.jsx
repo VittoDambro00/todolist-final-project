@@ -8,13 +8,11 @@ import "./BurgerMenu.css"
 
 export default function Navbar() {
   const [nomeUtenteInserito, setNomeUtenteInserito] = useState("");
-  console.log(nomeUtenteInserito);
 
   useEffect(() => {
     const nomeUtenteInserito = JSON.parse(localStorage.getItem("nomeUtente"));
     if (nomeUtenteInserito) {
       setNomeUtenteInserito(nomeUtenteInserito);
-      console.log(nomeUtenteInserito);
     }
   }, []);
 
