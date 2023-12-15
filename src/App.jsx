@@ -15,7 +15,7 @@ export default function App() {
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/home" element={<Home />} />
           <Route path="/pomodoroTimer" element={<PomodoroTimer />} />
-          <Route path="/error404" element={<Error404 />} />
+          <Route path="/*" element={<Error404 />} />
         </Routes>
         <Footer />
       </Router>
