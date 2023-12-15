@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
+<<<<<<< HEAD
     /* font-family: 'Raleway', sans-serif; */
     font-family: 'Afacad', sans-serif;
 }
   
+=======
+    font-family: 'Afacad', sans-serif;
+}
+>>>>>>> 093bf433d44d22e22779afdd6605b6273bbba1c4
