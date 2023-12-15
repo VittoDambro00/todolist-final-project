@@ -56,7 +56,7 @@ export default function Home() {
       <div className="h-[25vh] flex justify-center items-center gap-4 w-[80wh]">
         <input
           id="text-input"
-          className=" min-w-[60vw] h-[5vh] rounded-[8px] p-[16px] dark:bg-[#262626] bg-white hover:border-0 dark:text-white text-black"
+          className=" min-w-[30vw] h-[5vh] rounded-[8px] p-[16px] dark:bg-[#262626] bg-white hover:border-0 dark:text-white text-black"
           type="text"
           onChange={controllaCambio}
         />
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
 
       <div className="w-[50vw] flex justify-center items-center flex-col mb-[100px]">
-        <div className="flex justify-between text-white w-[90vw] mt-[100px] mb-[100px]">
+        <div className="flex justify-between text-white max-w-[50vw] min-w-[30vw] mt-[100px] mb-[100px]">
           <div className="h-0 dark:text-[#E25858]">
             Task created{" "}
             <span className="dark:bg-slate-600 bg-white p-[3px] rounded-full dark:text-white text-[#E25858]">
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <div className="h-0 dark:text-[#E25858]">
             <span className="dark:bg-slate-600 bg-white p-[3px] rounded-full dark:text-white text-[#E25858]">
-              0
+              {taskCompleted}
             </span>{" "}
             Tasks completed
           </div>
@@ -97,25 +97,26 @@ export default function Home() {
           return (
             <div
               data-aos="fade-right"
-              className="text-center dark:bg-slate-600 bg-white rounded-lg p-[5px] m-1 w-[300px]"
+              className=" dark:bg-[#262626] bg-white rounded-lg  m-1 max-w-[50vw] dark:text-white gap-[12px] flex items-center justify-between  p-[16px]"
               key={index}
             >
-              <div>
+              <div className="flex flex-row">
                 <input
                   type="checkbox"
                   name=""
                   id={index}
-                  className="mr-5 accent-[#e25858] "
+                  className="mr-5 accent-[#e25858]"
                   value={task.taskName}
                   onClick={checkTask}
                 />
+                <div className="w-[30vw]">
                <label htmlFor={index}>{task.taskName}</label>
+               </div>
               </div>
               <button
                 onClick={() => elimaTask(task.id)}
-                className="text-red-600 font-bold ml-7"
               >
-                <img src={trash} alt="trash" />
+                <img src={trash} alt="trash" className="h-[24px] w-[24px]"/>
               </button>
             </div>
           );
