@@ -15,7 +15,7 @@ export default function Navbar() {
     }, []);
 
   return (
-    <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full  top-0 left-0">
+    <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full top-0 left-0">
       <div className="flex flex-row justify-center items-center gap-4">
         <img
           src="https://freesvg.org/img/pomodorotimer.png"
@@ -24,10 +24,10 @@ export default function Navbar() {
         />
         <h1>To-Do List</h1>
       </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 text-white">
         <Link to="/">Home</Link>
-        <h1 className="flex justify-center items-center h-screen">{nomeUtenteInserito}</h1>
-        <h1>PomodoroTimer</h1> {/*provvisorio, da sostituire con quello sopra*/}
+        <Link to="/pomodoroTimer">Pomodoro timer</Link>
+        <h1 className="flex justify-center items-center">{nomeUtenteInserito}</h1>
       </div>
     </nav>
   );
