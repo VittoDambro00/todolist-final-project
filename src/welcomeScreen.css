@@ -1,0 +1,14 @@
+button {
+    border: 1px solid rgb(194, 194, 194);
+    padding: 6px 20px;
+    border-radius: 25px;
+}
+
+button:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 3px rgb(129, 129, 129);
+}
+
+.shadow_hover {
+    box-shadow: 0 0 3px rgb(94, 94, 94);
+}
