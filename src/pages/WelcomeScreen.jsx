@@ -3,13 +3,33 @@ import "./welcomeScreen.css"
 // import { useNavigate } from "react-router-dom" // prova di Vitto, funziona ma non 100%?
 import { Link } from "react-router-dom"
 
+
+// Imposto palette colori, dei 2 temi.
+/* const coloreTitolo = "text-sky-50";
+const coloreTesto = "text-sky-100";
+const coloreSfondo = "bg-sky-950";
+const paletteColoriDark = {titolo: coloreTitolo, testo: coloreTesto, sfondo: coloreSfondo};
+const coloreTitoloLight = "text-sky-950";
+const coloreTestoLight = "text-sky-700";
+const coloreSfondoLight = "bg-sky-50";
+const paletteColoriLight = {titolo: coloreTitoloLight, testo:coloreTestoLight, sfondo:coloreSfondoLight};
+let darkThemeOn = true; */
+
+// Funzione che cambia tema
 export default function WelcomeScreen() {
+/*     
+    const [paletteColori, setPaletteColori] = useState(paletteColoriDark);
+    function cambiaPaletteColori() {
+        darkThemeOn = !darkThemeOn;
+        darkThemeOn ? setPaletteColori(paletteColoriDark) : setPaletteColori(paletteColoriLight);   
+    } */
+
     
-    //     function gestisciPressioneInvio(bottonePremuto) {
-    //     if (bottonePremuto.key === "Enter") {
-    //         vaiAHome();
-    //     }
-    // }
+    /*     function gestisciPressioneInvio(bottonePremuto) {
+        if (bottonePremuto.key === "Enter") {
+            vaiAHome();
+        }
+    } */
     const [nomeUtente, setNomeUtente] = useState("Guest");
     
     useEffect(() => {
@@ -41,7 +61,7 @@ export default function WelcomeScreen() {
                                 required 
                             />
 
-                            {/* <button onClick={()=>{
+{/*                             <button onClick={()=>{
                                 setNomeUtente(nomeUtente)
                                 useNavigate().navigateTo("/index")
                             }}>Inizia!</button> */}
