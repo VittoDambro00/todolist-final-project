@@ -44,7 +44,7 @@ export default function Home() {
     AOS.init();
   }, []);
 
-  function checkTask(event) {
+  function checkTask() {
     const check = document.querySelectorAll("input:checked");
    
     console.log(check);
