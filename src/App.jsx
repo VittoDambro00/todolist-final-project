@@ -1,9 +1,10 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import WelcomeScreen from "./pages/WelcomeScreen.jsx";
 import Error404 from "./pages/Error404.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
-import PomodoroTimer from "./pages/PomodoroTimer"; 
+import PomodoroTimer from "./pages/PomodoroTimer";
 
 export default function App() {
   return (
@@ -21,4 +22,3 @@ export default function App() {
     </div>
   );
 }
-
