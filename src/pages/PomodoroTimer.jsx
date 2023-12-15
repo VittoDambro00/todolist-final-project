@@ -1,9 +1,9 @@
 // src/App.js
 import { useState, useEffect } from 'react';
+import Spotify from "../components/Spotify.jsx"
 
 
-
-const Timer = () => {
+export default function Timer() {
   const [time, setTime] = useState(1500); // Tempo in secondi (25 minuti)
   const [isActive, setIsActive] = useState(false);
 
@@ -39,14 +39,14 @@ const Timer = () => {
   }, [isActive, time]);
 
   return (
-    <div className='bg-red-500/80'>
+    <div className='bg-red-600/80 dark:bg-[#1A1A1A]'>
 
     <div className="flex flex-col items-center justify-center min-h-screen">
 
       <div className="flex flex-col items-center mt-8">
       <div className="relative group transition-transform transform-gpu">
-        <img src="/src/assets/pomodoroTimer.png" alt="Pomodoro Timer"
-          className="mb-8 scale-100 group-hover:scale-105 transition-transform duration-300 ease-in-out"/>
+        <img src="../src/assets/pomodoroTimer.png" alt="Pomodoro Timer"
+          className="mb-8 scale-100 group-hover:scale-105 transition-transform duration-300 ease-in-out" />
       </div>
       </div>
 
@@ -84,9 +84,6 @@ const Timer = () => {
         </div>
       </div>
     </div>
-
     </div>
   );
 };
-
-export default Timer;

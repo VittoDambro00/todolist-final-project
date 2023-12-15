@@ -55,7 +55,7 @@ export default function WelcomePage() {
                                 onChange={(event) => setNomeUtente(event.target.value)} 
                                 /* onKeyDown={gestisciPressioneInvio} */
                                 id="search" 
-                                className="block w-[246px] p-4 text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-gray-500 focus:border-gray-500" 
+                                className="block w-[246px] p-4 text-gray-900 border-2 border-gray-300 rounded-xl bg-gray-50 focus:ring-gray-500 focus:border-gray-500" 
                                 placeholder="Inserisci il tuo nome" 
                                 required 
                             />

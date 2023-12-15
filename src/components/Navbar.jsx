@@ -1,26 +1,21 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Theme from "./Theme"
  
 
 export default function Navbar() {
     const [nomeUtenteInserito, setNomeUtenteInserito] = useState("");
-    console.log(nomeUtenteInserito);
     const location = useLocation()
-
-    if(location.pathname === "/") {
-      return null
-    }
 
     useEffect(() => {
       const nomeUtenteInserito = JSON.parse(localStorage.getItem('nomeUtente'));
       if (nomeUtenteInserito) {
        setNomeUtenteInserito(nomeUtenteInserito);
-       console.log(nomeUtenteInserito);
       }
     }, []);
 
   return (
-    <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full top-0 left-0">
+    <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full top-0 left-0 gap-4">
       <div className="flex flex-row justify-center items-center gap-4">
         <img
           src="https://freesvg.org/img/pomodorotimer.png"
@@ -32,7 +27,8 @@ export default function Navbar() {
       <div className="flex flex-row gap-4 text-white">
         <Link to="/home">Home</Link>
         <Link to="/pomodoroTimer">Pomodoro timer</Link>
-        <h1 className="flex justify-center items-center">{nomeUtenteInserito}</h1>
+        {/* <h1 className="flex justify-center items-center">{nomeUtenteInserito}</h1> */}
+        <Theme />
       </div>
     </nav>
   );
