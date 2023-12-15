@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full top-0 left-0 gap-4">
-     <Menu>
+     <Menu customBurgerIcon>
       <a className="menu-item" href="/home">
         Home
       </a>
