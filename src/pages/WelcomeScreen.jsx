@@ -15,7 +15,7 @@ const paletteColoriLight = {titolo: coloreTitoloLight, testo:coloreTestoLight, s
 let darkThemeOn = true; */
 
 // Funzione che cambia tema
-export default function WelcomePage() {
+export default function WelcomeScreen() {
 /*     
     const [paletteColori, setPaletteColori] = useState(paletteColoriDark);
     function cambiaPaletteColori() {

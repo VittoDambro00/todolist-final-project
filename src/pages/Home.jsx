@@ -46,7 +46,6 @@ export default function Home() {
 
   function checkTask() {
     const check = document.querySelectorAll("input:checked");
-   
     console.log(check);
     setTaskCompleted(check.length);
   }
@@ -128,3 +127,4 @@ export default function Home() {
     </div>
   );
 }
+//Ciao Paolo, spero tu risolva
