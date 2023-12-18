@@ -67,7 +67,6 @@ export default function Home() {
           Invio
         </button>
       </div>
-
       <div className="w-[50vw] flex justify-center items-center flex-col mb-[100px]">
         <div className="flex flex-col md:flex-row justify-between text-white max-w-[50vw] min-w-[30vw] mt-[100px] mb-[100px] h-[10vh] items-center">
           <div className="h-0 dark:text-[#E25858]">

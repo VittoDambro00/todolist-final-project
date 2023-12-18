@@ -156,7 +156,7 @@ export default function Timer() {
             La tecnica del pomodoro per maggiore produttività e meno stress!
           </h4>
           <img
-            src="/src/assets/img/tecnica-del-pomodoro-come-funziona-1024x512.webp"
+            src="/src/assets/img/tecnica-del-pomodoro-come-funziona-1024x512.png"
             alt="scheda tecnica"
           />
           <div className="container mx-auto text-justify">

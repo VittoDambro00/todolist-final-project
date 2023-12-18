@@ -25,16 +25,16 @@ export default function Navbar() {
       <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full top-0 left-0 gap-4">
       <div className="flex flex-row justify-center items-center gap-4">
         <img
-          src="https://freesvg.org/img/pomodorotimer.png"
+          src="./src/assets/img/icons8-list-100.png"
           alt="logo"
           className="h-[70px] w-[70px]"
         />
-        <h1>To-Do List</h1>
+        <h1 className="text-xl">ToDius</h1>
       </div>
+      <p className="text-xl">Benvenuto {nomeUtenteInserito}!</p>
       <div className="hidden flex-row gap-4 text-white md:flex items-center">
         <Link to="/home">Home</Link>
         <Link to="/pomodoroTimer">Pomodoro timer</Link>
-        <p>Benvenuto {nomeUtenteInserito}!</p>
         <Theme />
       </div>
       <div className="flex md:hidden">

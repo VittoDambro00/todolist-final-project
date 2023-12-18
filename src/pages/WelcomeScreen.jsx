@@ -22,7 +22,7 @@ export default function WelcomeScreen() {
     return  <div className="bg-[#E25858] h-[100vh] w-full flex justify-center items-center text-center moving-gradient-background">
                 <div className="rounded-3xl px-4 py-1 w-[420px] flex flex-col justify-center">
                     <div className="rounded-[25px] py-10 px-10 border border-white shadow_personalizzata">
-                        <p className={`text-white subpixel-antialiased tracking-wide text-4xl mb-10`}>Welcome to Todius</p>
+                        <p className={`text-white subpixel-antialiased tracking-wide text-4xl mb-10`}>Welcome to ToDius</p>
                         <p className={`text-white text-lg`}>Ciascun istante è un dono prezioso. Scegli come investire il tuo tempo con saggezza, poiché la somma di piccole azioni determina la grandezza di una vita straordinaria. Frase motivazionale a c* by chatGPT.</p>
                         <p className={`text-white text-lg mb-3 mt-8`}>Presentati!</p>
 
