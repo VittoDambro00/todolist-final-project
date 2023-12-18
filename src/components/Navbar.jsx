@@ -39,13 +39,13 @@ export default function Navbar() {
       </div>
       <div className="flex md:hidden">
      <Menu right>
+     <p>Benvenuto {nomeUtenteInserito}!</p>
       <a className="menu-item" href="/home">
         Home
       </a>
       <a className="menu-item" href="/pomodoroTimer">
         Pomodoro timer
       </a>
-      <p>Benvenuto {nomeUtenteInserito}!</p>
     </Menu>
     </div>
     </nav>
