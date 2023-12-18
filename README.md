@@ -42,7 +42,11 @@ In questa pagina si hanno a disposizione 3 opzioni per il timer, una di default 
 By Miriam Pasculli
 <br>
 <br>
-Navbar, Footer by Vittorio D'Ambrosio
+Navbar, Footer
+<br>
+<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenMobile.png" alt="MobileImg" height="200"/>
+<br>
+by Vittorio D'Ambrosio
 <br>
 <br>
 Per domande o feedback contattate l'indirizzo:
