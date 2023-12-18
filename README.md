@@ -48,6 +48,13 @@ Navbar, footer e adattamento mobile:
 <img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenMobile.png" alt="MobileImg" height="200"/>
 <br>
 by Vittorio D'Ambrosio
+
+### Progetto realizzato da:
+- [Miriam Pasculli ](https://github.com/Miriam-pasculli-95)
+- [Paolo Montagna](https://github.com/OodDev)
+- [Riccardo Patronaggio](https://github.com/rikyking)
+- [Vittorio D'Ambrosio](https://github.com/VittoDambro00)
+
 <br>
 <br>
 Per domande o feedback contattate l'indirizzo:
