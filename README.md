@@ -19,13 +19,19 @@ Il progetto è stato sviluppato in React, con Tailwind e vanilla CSS per la part
 
 Welcome page:
 Inserendo il proprio nome ci si registra e si passa alla pagina adibita alle task.
-<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenWelcome.png" alt="WelcomeImg" height="20"/>
+<br>
+<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenWelcome.png" alt="WelcomeImg" height="100"/>
+<br>
 Home/Task page:
 Qui' si ha la possibilita' di aggiungere o rimuovere eventuali tasks, nonche' l'opzione di spuntare le tasks eseguite.
-<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenHome.png" alt="HomeImg" height="20"/>
+<br>
+<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenHome.png" alt="HomeImg" height="100"/>
+<br>
 Pomodoro timer:
 Questa pagina e' basata su una tecnica efficace per gestire il proprio tempo:
 In questa pagina si hanno a disposizione 3 opzioni per il timer, una di default (il piu' lungo) fatto per il lasso di tempo in cui si deve studiare, una (opzione corta) per le pause brevi e l'ultima (opzione intermedia) per le pause lunghe.
-<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenPomodoro.png" alt="PomodoroImg" height="20"/>
+<br>
+<img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenPomodoro.png" alt="PomodoroImg" height="100"/>
+<br>
 Per domande o feedback contattate l'indirizzo:
 babbo.natale@poloNordMail.com
