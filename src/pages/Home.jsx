@@ -3,12 +3,14 @@ import notepad from "../assets/img/Clipboard.png";
 import trash from "../assets/img/trash.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
   const [lista, setLista] = useState([]);
   const [nuovaTask, setTask] = useState("");
   const [singolTask, setsingolTask] = useState(0);
   const [taskCompleted, setTaskCompleted] = useState(0);
+  // const [iconCheck, setIconCheck] = useState(false);
 
   function controllaCambio(event) {
     setTask(event.target.value);
@@ -31,17 +33,28 @@ export default function Home() {
     }
   }
 
-  function elimaTask(id,val) {
-    console.log(id);
-    const isCheck = document.querySelectorAll("input:checked");
-    console.log(isCheck);
-    for (let i = 0; i < isCheck.length; i++) {
-      if (isCheck[i].value == val  && isCheck[i].checked == true) {
-        console.log("ENTRATOOO");
-        isCheck[i].checked = false;
-      }
+  function eliminaTask(id) {
+    // console.log(id);
+    // const isCheck = document.querySelectorAll("input:checked");
+    // console.log(isCheck);
+    // for (let i = 0; i < isCheck.length; i++) {
+    //   if (isCheck[i].value == val && isCheck[i].checked == true) {
+    //     console.log("ENTRATOOO");
+    //     isCheck[i].checked = false;
+    //   }
+    // }
+    // setLista(lista.filter((task) => task.id !== id));
+    // setsingolTask(singolTask - 1);
+    // if (taskCompleted >= singolTask) {
+    //   setTaskCompleted(taskCompleted - 1);
+    // }
+    const taskToDelete = lista.find((task) => task.id === id);
+
+    if (taskToDelete.completed) {
+      setTaskCompleted(taskCompleted - 1);
     }
-    setLista(lista.filter((task) => task.id !== id));
+    const nuovaLista = lista.filter((task) => task.id !== id);
+    setLista(nuovaLista);
     setsingolTask(singolTask - 1);
     if (taskCompleted >= singolTask) {
       setTaskCompleted(taskCompleted - 1);
@@ -53,16 +66,50 @@ export default function Home() {
     AOS.init();
   }, []);
 
-  function checkTask() {
-    const check = document.querySelectorAll("input:checked");
-    console.log(check);
-    setTaskCompleted(check.length);
+  function checkTask(id) {
+    // const check = document.querySelectorAll("input:checked");
+    // console.log(check);
+    // setTaskCompleted(check.length);
+    console.log("crash");
+    let count = 0;
+    // if () {
+    //   setIconCheck(false);
+    //   lista.map((task) => {
+    //     if (task.id == id) {
+    //       task.completed = false;
+    //     }
+    //     if (task.completed == true) {
+    //       count += 1;
+    //     }
+    //   });
+    // } else {
+    //   setIconCheck(true);
+    //   lista.map((task) => {
+    //     if (task.id == id) {
+    //       task.completed = true;
+    //     }
+    //     if (task.completed == true) {
+    //       count += 1;
+    //     }
+    //   });
+    // }
+
+    setTaskCompleted(count);
   }
 
   // Il seguente codice aggiunge un event listener che ascolta l'evento "keydown" del documento.
   // Se il tasto premuto è "Enter", viene chiamata la funzione "aggiungiTask()".
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && nuovaTask !== "") aggiungiTask();
+  function handleKeyDown(e) {
+    if (e.key === "Enter" && nuovaTask !== "") {
+      aggiungiTask();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   });
 
   return (
@@ -110,11 +157,11 @@ export default function Home() {
         {lista.map((task, index) => {
           return (
             <div
-              data-aos="fade-right"
-              className="text-white gap-[12px] flex items-center justify-between text-center bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
+              data-aos="fade-down"
+              className="text-white gap-[12px] flex items-center justify-between  bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
               key={index}
             >
-              <div>
+              {/* <div>
                 <input
                   id={index}
                   type="checkbox"
@@ -123,11 +170,20 @@ export default function Home() {
                   onClick={checkTask}
                 />
                 <label htmlFor={index}>{task.taskName}</label>
-              </div>
+              </div> */}
+              <div
+                id={index}
+                onClick={() => {
+                  checkTask(task.id);
+                }}
+                className="hover:cursor-pointer"
+              >
+              {task.completed ? "✅" : "❌"}</div>
+              {task.taskName}
               <div
                 id={index}
                 className="hover:cursor-pointer"
-                onClick={() => elimaTask(task.id,task.taskName)}
+                onClick={() => eliminaTask(task.id)}
               >
                 <img src={trash} alt="trash" />
               </div>
