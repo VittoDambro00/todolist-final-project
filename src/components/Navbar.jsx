@@ -14,14 +14,14 @@ export default function Navbar() {
       setNomeUtenteInserito(nomeUtenteInserito);
     }
   });
-//funzione che ci permette di eseguire un "logout" fittizio(tornare nel welcome screen)
-//andremo ad usare nel return questa funzione che verra' attivata all'onChange del select
+  //funzione che ci permette di eseguire un "logout" fittizio(tornare nel welcome screen)
+  //andremo ad usare nel return questa funzione che verra' attivata all'onChange del select
   function logoutFunction(event) {
     if (event.target.value === "logout") {
       navigate("/");
     }
   }
-  //utilizzo dello useLocation di react router dom che in questo caso viene usato con pathname per capire in che pagina siamo, non vogliamo mostrare la navbar nel welcome ma vogliamo che la mostri soltanto nelle altre pagine, 
+  //utilizzo dello useLocation di react router dom che in questo caso viene usato con pathname per capire in che pagina siamo, non vogliamo mostrare la navbar nel welcome ma vogliamo che la mostri soltanto nelle altre pagine,
   //quindi la funzione restituisce null se siamo nel welcome screen, altrimenti carica la navbar
   const location = useLocation();
   if (location.pathname === "/") {
@@ -53,7 +53,7 @@ export default function Navbar() {
               <option value="cancel" className="bg-[#E25858] hidden">
                 Logout
               </option>
-              <option value="logout" className="bg-[#E25858]" >
+              <option value="logout" className="bg-[#E25858]">
                 Logout
               </option>
               <option value="cancel" className="bg-[#E25858]">
