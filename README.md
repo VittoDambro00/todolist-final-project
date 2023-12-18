@@ -24,12 +24,14 @@ Inserendo il proprio nome ci si registra e si passa alla pagina adibita alle tas
 <br>
 By Paolo Montagna
 <br>
+<br>
 Home/Task page:
 Qui' si ha la possibilita' di aggiungere o rimuovere eventuali tasks, nonche' l'opzione di spuntare le tasks eseguite.
 <br>
 <img src="https://github.com/VittoDambro00/imgfinalproject/blob/main/screenHome.png" alt="HomeImg" height="200"/>
 <br>
 By Riccardo Patronaggio
+<br>
 <br>
 Pomodoro timer:
 Questa pagina e' basata su una tecnica efficace per gestire il proprio tempo:
@@ -39,7 +41,9 @@ In questa pagina si hanno a disposizione 3 opzioni per il timer, una di default 
 <br>
 By Miriam Pasculli
 <br>
+<br>
 Navbar, Footer by Vittorio D'Ambrosio
+<br>
 <br>
 Per domande o feedback contattate l'indirizzo:
 babbo.natale@poloNordMail.com
