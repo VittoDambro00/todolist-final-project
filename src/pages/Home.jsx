@@ -3,14 +3,12 @@ import notepad from "../assets/img/Clipboard.png";
 import trash from "../assets/img/trash.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Icon } from "@iconify/react";
 
 export default function Home() {
   const [lista, setLista] = useState([]);
   const [nuovaTask, setTask] = useState("");
   const [singolTask, setsingolTask] = useState(0);
   const [taskCompleted, setTaskCompleted] = useState(0);
-  // const [iconCheck, setIconCheck] = useState(false);
 
   function controllaCambio(event) {
     setTask(event.target.value);
@@ -34,20 +32,6 @@ export default function Home() {
   }
 
   function eliminaTask(id) {
-    // console.log(id);
-    // const isCheck = document.querySelectorAll("input:checked");
-    // console.log(isCheck);
-    // for (let i = 0; i < isCheck.length; i++) {
-    //   if (isCheck[i].value == val && isCheck[i].checked == true) {
-    //     console.log("ENTRATOOO");
-    //     isCheck[i].checked = false;
-    //   }
-    // }
-    // setLista(lista.filter((task) => task.id !== id));
-    // setsingolTask(singolTask - 1);
-    // if (taskCompleted >= singolTask) {
-    //   setTaskCompleted(taskCompleted - 1);
-    // }
     const taskToDelete = lista.find((task) => task.id === id);
 
     if (taskToDelete.completed) {
@@ -67,34 +51,16 @@ export default function Home() {
   }, []);
 
   function checkTask(id) {
-    // const check = document.querySelectorAll("input:checked");
-    // console.log(check);
-    // setTaskCompleted(check.length);
-    console.log("crash");
-    let count = 0;
-    // if () {
-    //   setIconCheck(false);
-    //   lista.map((task) => {
-    //     if (task.id == id) {
-    //       task.completed = false;
-    //     }
-    //     if (task.completed == true) {
-    //       count += 1;
-    //     }
-    //   });
-    // } else {
-    //   setIconCheck(true);
-    //   lista.map((task) => {
-    //     if (task.id == id) {
-    //       task.completed = true;
-    //     }
-    //     if (task.completed == true) {
-    //       count += 1;
-    //     }
-    //   });
-    // }
-
-    setTaskCompleted(count);
+    
+    const updatedLista = lista.map((task) => {
+      if (task.id === id) {
+        task.completed = !task.completed;
+      }
+      return task;
+    });
+    const completedCount = updatedLista.filter((task) => task.completed).length;
+    setLista(updatedLista);
+    setTaskCompleted(completedCount);
   }
 
   // Il seguente codice aggiunge un event listener che ascolta l'evento "keydown" del documento.
@@ -160,17 +126,7 @@ export default function Home() {
               data-aos="fade-down"
               className="text-white gap-[12px] flex items-center justify-between  bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
               key={index}
-            >
-              {/* <div>
-                <input
-                  id={index}
-                  type="checkbox"
-                  className="mr-5 accent-[#e25858] hover:cursor-pointer"
-                  value={task.taskName}
-                  onClick={checkTask}
-                />
-                <label htmlFor={index}>{task.taskName}</label>
-              </div> */}
+            >             
               <div
                 id={index}
                 onClick={() => {
@@ -178,7 +134,8 @@ export default function Home() {
                 }}
                 className="hover:cursor-pointer"
               >
-              {task.completed ? "✅" : "❌"}</div>
+                {task.completed ? "✅" : "❌"}
+              </div>
               {task.taskName}
               <div
                 id={index}
