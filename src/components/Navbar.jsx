@@ -21,21 +21,22 @@ export default function Navbar() {
     return (
       <nav className="flex flex-row justify-between items-center bg-[#E25858]/90 h-[80px] p-4 font-medium text-white w-full top-0 left-0">
         <div className="flex flex-row justify-center items-center gap-4">
-          <img
-            src="https://freesvg.org/img/pomodorotimer.png"
-            alt="logo"
-            className="h-[70px] w-[70px]"
-          />
+          <Link to="/">
+            <img
+              src="https://freesvg.org/img/pomodorotimer.png"
+              alt="logo"
+              className="h-[70px] w-[70px]"
+            />
+          </Link>
           <h1>To-Do List</h1>
         </div>
         <h1 className="flex justify-center items-center underline">
-          Ciao, 
-            {" " + nomeUtenteInserito}
+          Ciao,
+          {" " + nomeUtenteInserito}
         </h1>
         <div className="flex flex-row gap-4 text-white">
           <Link to="/home">Home</Link>
           <Link to="/pomodoroTimer">Pomodoro timer</Link>
-          
         </div>
       </nav>
     );

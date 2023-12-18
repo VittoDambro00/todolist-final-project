@@ -27,6 +27,7 @@ export default function Home() {
       setLista(newArray);
       console.log(lista);
       setTask("");
+      console.log(nuovaTask);
     }
   }
 
