@@ -40,5 +40,6 @@ In questa pagina si hanno a disposizione 3 opzioni per il timer, una di default 
 By Miriam Pasculli
 <br>
 Navbar, Footer by Vittorio D'Ambrosio
+<br>
 Per domande o feedback contattate l'indirizzo:
 babbo.natale@poloNordMail.com
