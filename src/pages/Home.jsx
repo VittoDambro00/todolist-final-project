@@ -79,7 +79,7 @@ export default function Home() {
   });
 
   return (
-    <div className="bg-[#191919] min-h-[calc(100vh-80px)] flex justify-center items-center flex-col">
+    <div className="bg-[#E25858] dark:bg-[#191919] min-h-[calc(100vh-80px)] flex justify-center items-center flex-col">
       <div className="h-[25vh] flex justify-center items-center gap-[8px]">
         <input
           id="text-input"
@@ -123,7 +123,7 @@ export default function Home() {
           return (
             <div
               data-aos="fade-down"
-              className="text-white gap-[12px] flex items-center justify-between  bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
+              className="dark:text-white gap-[12px] flex items-center justify-between bg-white dark:bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
               key={index}
             >             
               <div
