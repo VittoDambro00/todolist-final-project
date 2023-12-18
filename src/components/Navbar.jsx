@@ -31,7 +31,7 @@ export default function Navbar() {
         />
         <h1 className="text-xl">ToDius</h1>
       </div>
-      <p className="text-xl">Benvenuto {nomeUtenteInserito}!</p>
+      <p className="text-xl hidden md:block">BenveCiao, {nomeUtenteInserito}!</p>
       <div className="hidden flex-row gap-4 text-white md:flex items-center">
         <Link to="/home">Home</Link>
         <Link to="/pomodoroTimer">Pomodoro timer</Link>
