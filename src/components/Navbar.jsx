@@ -45,7 +45,7 @@ export default function Navbar() {
           </p>
           <div className="custom-select w-[60px]">
             <select
-              className="bg-[#E25858]/0"
+              className="bg-[#E25858]/0 hidden md:block"
               onChange={(event) => logoutFunction(event)}
               id="logout"
               value=""
@@ -76,6 +76,7 @@ export default function Navbar() {
             <a className="menu-item" href="/pomodoroTimer">
               Pomodoro timer
             </a>
+            <Link to="/">Logout</Link>
           </Menu>
         </div>
       </nav>
