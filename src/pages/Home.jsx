@@ -69,7 +69,7 @@ export default function Home() {
       </div>
 
       <div className="w-[50vw] flex justify-center items-center flex-col mb-[100px]">
-        <div className="flex justify-between text-white max-w-[50vw] min-w-[30vw] mt-[100px] mb-[100px]">
+        <div className="flex flex-col md:flex-row justify-between text-white max-w-[50vw] min-w-[30vw] mt-[100px] mb-[100px] h-[10vh] items-center">
           <div className="h-0 dark:text-[#E25858]">
             Task created{" "}
             <span className="dark:bg-slate-600 bg-white p-[3px] rounded-full dark:text-white text-[#E25858]">

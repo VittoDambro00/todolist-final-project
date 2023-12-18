@@ -29,7 +29,7 @@
   */
   .bm-menu-wrap {
     position: fixed;
-    height: 100px;
+    height: 100vh;
   }
   
   /* General sidebar styles */

@@ -2,18 +2,19 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Theme from "./Theme";
 import { stack as Menu } from 'react-burger-menu';
-import "./BurgerMenu.css"
+import "./BurgerMenu.css";
+
  
 
 export default function Navbar() {
   const [nomeUtenteInserito, setNomeUtenteInserito] = useState("");
 
   useEffect(() => {
-    const nomeUtenteInserito = JSON.parse(localStorage.getItem("nomeUtente"));
+    let nomeUtenteInserito = JSON.parse(localStorage.getItem("nomeUtente"));
     if (nomeUtenteInserito) {
       setNomeUtenteInserito(nomeUtenteInserito);
     }
-  }, []);
+  });
 
   const location = useLocation();
 
@@ -30,10 +31,10 @@ export default function Navbar() {
         />
         <h1>To-Do List</h1>
       </div>
-      <div className="hidden flex-row gap-4 text-white md:flex">
+      <div className="hidden flex-row gap-4 text-white md:flex items-center">
         <Link to="/home">Home</Link>
         <Link to="/pomodoroTimer">Pomodoro timer</Link>
-        {/* <h1 className="flex justify-center items-center">{nomeUtenteInserito}</h1> */}
+        <p>Benvenuto {nomeUtenteInserito}!</p>
         <Theme />
       </div>
       <div className="flex md:hidden">
@@ -44,6 +45,7 @@ export default function Navbar() {
       <a className="menu-item" href="/pomodoroTimer">
         Pomodoro timer
       </a>
+      <p>Benvenuto {nomeUtenteInserito}!</p>
     </Menu>
     </div>
     </nav>
