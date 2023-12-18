@@ -109,15 +109,15 @@ export default function Home() {
                   value={task.taskName}
                   onClick={checkTask}
                 />
-                <div className="w-[30vw]">
+                <div className="w-[25vw] md:w-[30vw]">
                <label htmlFor={index}>{task.taskName}</label>
                </div>
               </div>
-              <button
+              <div className="w-[24px]"
                 onClick={() => elimaTask(task.id)}
               >
-                <img src={trash} alt="trash" className="h-[24px] w-[24px]"/>
-              </button>
+                <img src={trash} alt="trash" className="min-h-[24px] min-w-[24px]"/>
+              </div>
             </div>
           );
         })}
