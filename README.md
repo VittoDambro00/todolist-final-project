@@ -7,7 +7,7 @@ Questo progetto consente di creare una to-do list, tenendo traccia dei vari comp
 
 Il progetto è stato sviluppato con:
   - <img src="https://github.com/OodDev/dummy/assets/150029160/e8dde9e7-dda9-4a23-a987-96054b065c53" alt="Immagine welcome screen" height="30"/>
-  - <img src="https://github.com/OodDev/dummy/assets/150029160/c3a1a77b-713c-4042-b1f2-3b8b62e8349c" alt="Immagine welcome screen" height="20"/>
+  - <img src="https://github.com/OodDev/dummy/assets/150029160/c3a1a77b-713c-4042-b1f2-3b8b62e8349c" alt="Immagine welcome screen" height="20"/>❤
   - [AOS - Animate On Scroll Library](https://michalsnik.github.io/aos/)
 
 
