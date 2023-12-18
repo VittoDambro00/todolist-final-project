@@ -28,12 +28,14 @@ export default function Navbar() {
           />
           <h1>To-Do List</h1>
         </div>
+        <h1 className="flex justify-center items-center underline">
+          Ciao, 
+            {" " + nomeUtenteInserito}
+        </h1>
         <div className="flex flex-row gap-4 text-white">
           <Link to="/home">Home</Link>
           <Link to="/pomodoroTimer">Pomodoro timer</Link>
-          <h1 className="flex justify-center items-center">
-            {nomeUtenteInserito}
-          </h1>
+          
         </div>
       </nav>
     );

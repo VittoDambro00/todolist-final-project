@@ -18,19 +18,28 @@ export default function Home() {
     if (nuovaTask !== "") {
       document.getElementById("text-input").value = "";
       const task = {
-        id: lista.length === 0 ? 1 : lista[lista.length - 1].id + 1,
+        id: lista.length === 0 ? 0 : lista[lista.length - 1].id + 1,
         taskName: nuovaTask,
+        completed: false,
       };
       setsingolTask(singolTask + 1);
       const newArray = [...lista, task];
       setLista(newArray);
+      console.log(lista);
       setTask("");
-    } else if (nuovaTask === "nino") {
-      console.log("ciaooo");
     }
   }
 
-  function elimaTask(id) {
+  function elimaTask(id,val) {
+    console.log(id);
+    const isCheck = document.querySelectorAll("input:checked");
+    console.log(isCheck);
+    for (let i = 0; i < isCheck.length; i++) {
+      if (isCheck[i].value == val  && isCheck[i].checked == true) {
+        console.log("ENTRATOOO");
+        isCheck[i].checked = false;
+      }
+    }
     setLista(lista.filter((task) => task.id !== id));
     setsingolTask(singolTask - 1);
     if (taskCompleted >= singolTask) {
@@ -38,8 +47,7 @@ export default function Home() {
     }
   }
 
-  // API Aos per fade toDo
-
+  // API Aos per fade task toDo
   useEffect(() => {
     AOS.init();
   }, []);
@@ -50,12 +58,14 @@ export default function Home() {
     setTaskCompleted(check.length);
   }
 
-  // useEffect(() => {
-  // }, []);
+  // Il seguente codice aggiunge un event listener che ascolta l'evento "keydown" del documento.
+  // Se il tasto premuto è "Enter", viene chiamata la funzione "aggiungiTask()".
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && nuovaTask !== "") aggiungiTask();
+  });
 
   return (
     <div className="bg-[#191919] min-h-[calc(100vh-80px)] flex justify-center items-center flex-col">
-      {/* <h1 className="text-4xl text-white mt-[100px]">{quotes}</h1> */}
       <div className="h-[25vh] flex justify-center items-center gap-[8px]">
         <input
           id="text-input"
@@ -105,21 +115,21 @@ export default function Home() {
             >
               <div>
                 <input
-                  type="checkbox"
-                  name=""
                   id={index}
-                  className="mr-5 accent-[#e25858] "
+                  type="checkbox"
+                  className="mr-5 accent-[#e25858] hover:cursor-pointer"
                   value={task.taskName}
                   onClick={checkTask}
                 />
-               <label htmlFor={index}>{task.taskName}</label>
+                <label htmlFor={index}>{task.taskName}</label>
               </div>
-              <button
-                onClick={() => elimaTask(task.id)}
-                className="text-red-600 font-bold ml-7"
+              <div
+                id={index}
+                className="hover:cursor-pointer"
+                onClick={() => elimaTask(task.id,task.taskName)}
               >
                 <img src={trash} alt="trash" />
-              </button>
+              </div>
             </div>
           );
         })}
