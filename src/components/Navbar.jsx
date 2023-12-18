@@ -48,11 +48,12 @@ export default function Navbar() {
               className="bg-[#E25858]/0"
               onChange={(event) => logoutFunction(event)}
               id="logout"
+              value=""
             >
               <option value="cancel" className="bg-[#E25858] hidden">
                 Logout
               </option>
-              <option value="logout" className="bg-[#E25858]">
+              <option value="logout" className="bg-[#E25858]" >
                 Logout
               </option>
               <option value="cancel" className="bg-[#E25858]">

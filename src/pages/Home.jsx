@@ -18,42 +18,69 @@ export default function Home() {
     if (nuovaTask !== "") {
       document.getElementById("text-input").value = "";
       const task = {
-        id: lista.length === 0 ? 1 : lista[lista.length - 1].id + 1,
+        id: lista.length === 0 ? 0 : lista[lista.length - 1].id + 1,
         taskName: nuovaTask,
+        completed: false,
       };
       setsingolTask(singolTask + 1);
       const newArray = [...lista, task];
       setLista(newArray);
+      console.log(lista);
       setTask("");
+      console.log(nuovaTask);
     }
   }
 
-  function elimaTask(id) {
-    setLista(lista.filter((task) => task.id !== id));
+  function eliminaTask(id) {
+    const taskToDelete = lista.find((task) => task.id === id);
+
+    if (taskToDelete.completed) {
+      setTaskCompleted(taskCompleted - 1);
+    }
+    const nuovaLista = lista.filter((task) => task.id !== id);
+    setLista(nuovaLista);
     setsingolTask(singolTask - 1);
     if (taskCompleted >= singolTask) {
       setTaskCompleted(taskCompleted - 1);
     }
   }
 
-  // API Aos per fade toDo
-
+  // API Aos per fade task toDo
   useEffect(() => {
     AOS.init();
   }, []);
 
-  function checkTask() {
-    const check = document.querySelectorAll("input:checked");
-    setTaskCompleted(check.length);
+  function checkTask(id) {
+    
+    const updatedLista = lista.map((task) => {
+      if (task.id === id) {
+        task.completed = !task.completed;
+      }
+      return task;
+    });
+    const completedCount = updatedLista.filter((task) => task.completed).length;
+    setLista(updatedLista);
+    setTaskCompleted(completedCount);
   }
 
-  // useEffect(() => {
-  // }, []);
+  // Il seguente codice aggiunge un event listener che ascolta l'evento "keydown" del documento.
+  // Se il tasto premuto è "Enter", viene chiamata la funzione "aggiungiTask()".
+  function handleKeyDown(e) {
+    if (e.key === "Enter" && nuovaTask !== "") {
+      aggiungiTask();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  });
 
   return (
-    <div className="bg-red-600/80 dark:bg-[#1A1A1A] min-h-screen flex justify-center items-center flex-col">
-      {/* <h1 className="text-4xl text-white mt-[100px]">{quotes}</h1> */}
-      <div className="h-[25vh] flex justify-center items-center gap-4 w-[80wh]">
+    <div className="bg-[#191919] min-h-[calc(100vh-80px)] flex justify-center items-center flex-col">
+      <div className="h-[25vh] flex justify-center items-center gap-[8px]">
         <input
           id="text-input"
           className=" min-w-[30vw] h-[5vh] rounded-[8px] p-[16px] dark:bg-[#262626] bg-white hover:border-0 dark:text-white text-black"
@@ -95,25 +122,24 @@ export default function Home() {
         {lista.map((task, index) => {
           return (
             <div
-              data-aos="fade-right"
-              className=" dark:bg-[#262626] bg-white rounded-lg  m-1 max-w-[50vw] dark:text-white gap-[12px] flex items-center justify-between  p-[16px]"
+              data-aos="fade-down"
+              className="text-white gap-[12px] flex items-center justify-between  bg-[#262626] p-[16px] m-1 w-[736px] h-[56px]"
               key={index}
-            >
-              <div className="flex flex-row">
-                <input
-                  type="checkbox"
-                  name=""
-                  id={index}
-                  className="mr-5 accent-[#e25858]"
-                  value={task.taskName}
-                  onClick={checkTask}
-                />
-                <div className="w-[25vw] md:w-[30vw]">
-               <label htmlFor={index}>{task.taskName}</label>
-               </div>
+            >             
+              <div
+                id={index}
+                onClick={() => {
+                  checkTask(task.id);
+                }}
+                className="hover:cursor-pointer"
+              >
+                {task.completed ? "✅" : "❌"}
               </div>
-              <div className="w-[24px]"
-                onClick={() => elimaTask(task.id)}
+              {task.taskName}
+              <div
+                id={index}
+                className="hover:cursor-pointer"
+                onClick={() => eliminaTask(task.id)}
               >
                 <img src={trash} alt="trash" className="min-h-[24px] min-w-[24px]"/>
               </div>
